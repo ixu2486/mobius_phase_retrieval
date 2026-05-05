@@ -1,0 +1,26 @@
+{
+  "checkpoint": "mobius_phase_retrieval_json_demo_v1",
+  "selected_profile": "HighAccuracy",
+  "adaptive_reason": "MultiPointHighAccuracy",
+  "hit_count": 2,
+  "hits": [
+    {
+      "payload_ref": "payload://archive/road/101",
+      "global_t": 101,
+      "semantic_anchor": "reptend_rerank",
+      "visibility": "BackLatent",
+      "importance": "BackArchive",
+      "latent_recoverable": true,
+      "total_score": 0.97
+    },
+    {
+      "payload_ref": "payload://hot/road/100",
+      "global_t": 100,
+      "semantic_anchor": "reptend_rerank",
+      "visibility": "FrontStage",
+      "importance": "FrontImportant",
+      "latent_recoverable": false,
+      "total_score": 0.91
+    }
+  ]
+}

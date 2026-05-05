@@ -1,0 +1,58 @@
+{
+  "records": [
+    {
+      "global_t": 100,
+      "semantic_anchor": "session_alpha_topic_road",
+      "visibility": "FrontStage",
+      "importance": "FrontCritical",
+      "payload_ref": "payload://hot/road/100",
+      "corruption_score": 0.02
+    },
+    {
+      "global_t": 101,
+      "semantic_anchor": "session_alpha_topic_road",
+      "visibility": "BackLatent",
+      "importance": "BackArchive",
+      "payload_ref": "payload://archive/road/101",
+      "corruption_score": 0.12
+    },
+    {
+      "global_t": 140,
+      "semantic_anchor": "critical_safety_control_plane_alert",
+      "visibility": "GlobalAnchor",
+      "importance": "FrontCritical",
+      "payload_ref": "payload://control/alert/140",
+      "corruption_score": 0.01
+    },
+    {
+      "global_t": 177,
+      "semantic_anchor": "session_beta_rf_field",
+      "visibility": "DualPlane",
+      "importance": "BackCritical",
+      "payload_ref": "payload://rf/field/177",
+      "corruption_score": 0.07
+    }
+  ],
+  "query": {
+    "global_t": 101,
+    "semantic_anchor": "session_alpha_topic_road",
+    "top_k": 4,
+    "corruption_tolerance": 0.5,
+    "phase_period_mode": "ReptendCycle",
+    "attention_points": [
+      {
+        "global_t": 101,
+        "weight": 1.0
+      },
+      {
+        "global_t": 100,
+        "weight": 0.6
+      },
+      {
+        "global_t": 102,
+        "weight": 0.4
+      }
+    ]
+  }
+}
+
