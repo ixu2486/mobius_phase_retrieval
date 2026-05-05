@@ -1,7 +1,7 @@
 # API Overview
 
 Target module:
-`crates/retryix_memory/src/mobius_phase_retrieval/mod.rs`
+`src/lib.rs` (standalone public crate)
 
 ## Core Public Types
 - `MobiusPhaseRetrieval`
@@ -40,4 +40,3 @@ Target module:
 
 ## Boundary Reminder
 This API decides recall ranking and memory-governance classes at application layer only.
-

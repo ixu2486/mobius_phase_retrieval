@@ -22,4 +22,4 @@ Checkpoint: `mobius_phase_retrieval_sdk_boundary_v1`
 ## Boundary Statement
 This package is intentionally limited to application-layer retrieval and memory-governance APIs.
 It is not a hardware runtime package and must not be interpreted as exposing private RetryIX execution infrastructure.
-
+This public crate is standalone and does not require private RetryIX source paths.

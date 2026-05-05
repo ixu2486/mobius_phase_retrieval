@@ -1,51 +1,13 @@
 //! SDK public example (application-layer only).
 //! Runnable counterpart:
-//! `cargo run -p retryix_memory --release --example mobius_phase_sdk_basic_usage`
+//! `cargo run --example basic_usage`
 
-use retryix_memory::mobius_phase_retrieval::{
-    AttentionPoint, HybridPhaseRetrieval, MobiusPhaseRetrieval, PhaseImportanceClass,
-    PhasePeriodMode, RetrievalQuery, VisibilityClass,
+use mobius_phase_retrieval_sdk::{
+    build_demo_index, AttentionPoint, PhasePeriodMode, RetrievalQuery,
 };
 
 fn main() {
-    let mut index = MobiusPhaseRetrieval::new();
-
-    index.add_record_with_importance_and_corruption(
-        100,
-        "session_alpha_topic_road",
-        VisibilityClass::FrontStage,
-        PhaseImportanceClass::FrontCritical,
-        "payload://hot/road/100",
-        0.02,
-    );
-    index.add_record_with_importance_and_corruption(
-        101,
-        "session_alpha_topic_road",
-        VisibilityClass::BackLatent,
-        PhaseImportanceClass::BackArchive,
-        "payload://archive/road/101",
-        0.15,
-    );
-    index.add_record_with_importance_and_corruption(
-        140,
-        "safety_control_plane_alert",
-        VisibilityClass::GlobalAnchor,
-        PhaseImportanceClass::FrontCritical,
-        "payload://control/alert/140",
-        0.01,
-    );
-
-    let mut hybrid = HybridPhaseRetrieval::new();
-    for r in index.records() {
-        hybrid.add_record_with_importance_and_corruption(
-            r.global_t,
-            r.semantic_anchor.clone(),
-            r.visibility,
-            r.importance,
-            r.payload_ref.clone(),
-            r.corruption_score,
-        );
-    }
+    let hybrid = build_demo_index();
 
     let query = RetrievalQuery::new(101)
         .with_semantic_anchor("session_alpha_topic_road")
@@ -72,4 +34,3 @@ fn main() {
         );
     }
 }
-

@@ -2,25 +2,43 @@
   "checkpoint": "mobius_phase_retrieval_json_demo_v1",
   "selected_profile": "HighAccuracy",
   "adaptive_reason": "MultiPointHighAccuracy",
-  "hit_count": 2,
+  "hit_count": 4,
   "hits": [
     {
       "payload_ref": "payload://archive/road/101",
       "global_t": 101,
-      "semantic_anchor": "reptend_rerank",
+      "semantic_anchor": "session_alpha_topic_road",
       "visibility": "BackLatent",
       "importance": "BackArchive",
       "latent_recoverable": true,
-      "total_score": 0.97
+      "total_score": 0.9034
     },
     {
       "payload_ref": "payload://hot/road/100",
       "global_t": 100,
-      "semantic_anchor": "reptend_rerank",
+      "semantic_anchor": "session_alpha_topic_road",
       "visibility": "FrontStage",
-      "importance": "FrontImportant",
+      "importance": "FrontCritical",
       "latent_recoverable": false,
-      "total_score": 0.91
+      "total_score": 0.8876
+    },
+    {
+      "payload_ref": "payload://rf/field/177",
+      "global_t": 177,
+      "semantic_anchor": "session_beta_rf_field",
+      "visibility": "DualPlane",
+      "importance": "BackCritical",
+      "latent_recoverable": true,
+      "total_score": 0.4869
+    },
+    {
+      "payload_ref": "payload://control/alert/140",
+      "global_t": 140,
+      "semantic_anchor": "critical_safety_control_plane_alert",
+      "visibility": "GlobalAnchor",
+      "importance": "FrontCritical",
+      "latent_recoverable": false,
+      "total_score": 0.4654
     }
   ]
 }

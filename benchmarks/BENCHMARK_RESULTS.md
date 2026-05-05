@@ -3,32 +3,23 @@
 Checkpoint: `mobius_phase_retrieval_sdk_benchmark_v1`
 
 ## Reproducible Commands
-Run from `E:\0421\retryix_rs`:
+Run from `E:\0421\retryix_rs\sdk\mobius_phase_retrieval`:
 
 ```powershell
-cargo test -p retryix_memory mobius_phase_retrieval -- --nocapture
-cargo run -p retryix_memory --release --example mobius_phase_retrieval_compare -- 5000 40 40
-cargo run -p retryix_memory --release --example mobius_phase_retrieval_compare -- 20000 200
-cargo run -p retryix_memory --release --example mobius_phase_retrieval_compare -- 50000 500 150
+cargo build
+cargo test
+cargo run --example basic_usage
+cargo run --example json_retrieval_demo -- examples/json_retrieval_demo_input.json
 ```
 
 ## Notes
-- `mobius_phase_retrieval_compare` includes:
-  - active fast path
-  - hybrid path
-  - adaptive policy path
-  - full_reptend precision path
-  - fast_k sweep
-  - adaptive quality breakdown (`v0.4.1`)
+- The standalone SDK intentionally focuses on application-layer retrieval flow.
+- Extended compare benchmarks remain available in the main RetryIX workspace (`retryix_memory` examples).
 
-## Example Snapshot (5000 / 40 / 40)
-- active top1: `0.300`
-- hybrid top1: `0.875`
-- adaptive top1: `0.825`
-- full_reptend top1: `1.000`
-
+## Example Snapshot (basic_usage)
+- selected_profile: `Balanced`
+- adaptive_reason: `DefaultBalanced`
+- sample ranked hits emitted to stdout
 Interpretation:
-- Fast path minimizes latency
-- Hybrid substantially improves top1 with moderate overhead
-- Adaptive policy provides decision transparency + breakdown metrics
-
+- Standalone crate is independently buildable/runnable
+- Public boundary remains application-layer only

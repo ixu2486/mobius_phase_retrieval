@@ -1,8 +1,8 @@
 //! SDK public JSON demo (application-layer only).
 //! Runnable counterpart:
-//! `cargo run -p retryix_memory --release --example mobius_phase_sdk_json_retrieval_demo -- sdk/mobius_phase_retrieval/examples/json_retrieval_demo_input.json`
+//! `cargo run --example json_retrieval_demo -- examples/json_retrieval_demo_input.json`
 
-use retryix_memory::mobius_phase_retrieval::{
+use mobius_phase_retrieval_sdk::{
     AttentionPoint, HybridPhaseRetrieval, PhaseImportanceClass, PhasePeriodMode, RetrievalQuery,
     VisibilityClass,
 };
@@ -108,7 +108,7 @@ fn parse_phase_mode(v: &str) -> PhasePeriodMode {
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let input_path = std::env::args().nth(1).map(PathBuf::from).unwrap_or_else(|| {
-        PathBuf::from("sdk/mobius_phase_retrieval/examples/json_retrieval_demo_input.json")
+        PathBuf::from("examples/json_retrieval_demo_input.json")
     });
     let raw = fs::read_to_string(&input_path)?;
     let parsed: JsonDemoInput = serde_json::from_str(&raw)?;
@@ -163,4 +163,3 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("{}", serde_json::to_string_pretty(&out)?);
     Ok(())
 }
-
