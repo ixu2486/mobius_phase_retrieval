@@ -1,15 +1,57 @@
-Möbius Phase Retrieval SDK License Notice
+# Möbius Phase Retrieval SDK License Notice
 
-This SDK package follows the repository-level RetryIX license terms.
-For full legal terms, refer to the root project license files.
+This SDK package is distributed under the official RetryIX licensing terms for the Möbius Phase Retrieval SDK.
 
-Summary:
-- Personal, academic, and non-commercial research use is free.
-- Commercial use requires a separate commercial license from RetryIX.
+## License Summary
 
-Precedence:
-- This notice is informational only.
-- If there is any conflict, the official repository license and any separately executed RetryIX commercial license agreement control.
+- Personal, academic, educational, and non-commercial research use is free and encouraged.
+- Commercial use requires a separate written commercial license from RetryIX.
 
-See also:
-- LICENSE_SUMMARY.md in this SDK package
+Commercial use includes, but is not limited to:
+
+- SaaS products
+- Enterprise deployment
+- Internal business tools
+- Paid services
+- Revenue-generating applications
+- Cloud or data-center retrieval systems
+- AI inference or model-serving platforms
+- Integration into proprietary commercial products
+
+## Scope Boundary
+
+This public SDK covers only the application-layer Möbius phase-aware retrieval interface.
+
+This license notice does not grant rights to private RetryIX technologies, including but not limited to:
+
+- RetryIX private runtime internals
+- MemoryKernel internal scheduling
+- VirtualPIM resident execution paths
+- TurboQuant-compatible backend internals
+- SPD / EEPROM physical memory interface designs
+- Hardware-specific routing logic
+- Patent-sensitive RetryIX core technology
+
+## Precedence and Legal Effect
+
+This notice is provided for informational purposes only.
+
+In case of any conflict or ambiguity:
+
+1. The official license file(s) in this repository shall prevail.
+2. Any separately executed written commercial license agreement between you and RetryIX shall prevail.
+3. Private RetryIX runtime, PIM, hardware-routing, and patent-sensitive technologies remain outside the scope of this public SDK license unless expressly licensed in writing.
+
+## See Also
+
+- [LICENSE](LICENSE)
+- [LICENSE_SUMMARY.md](LICENSE_SUMMARY.md)
+- [docs/ARCHITECTURE_BOUNDARY.md](docs/ARCHITECTURE_BOUNDARY.md)
+
+## Commercial License Contact
+
+Contact: ice____@msn.com
+
+---
+
+Copyright © 2026 RetryIX. All rights reserved.
