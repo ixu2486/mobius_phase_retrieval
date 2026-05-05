@@ -2,7 +2,7 @@
 
 Möbius Phase Retrieval SDK helps AI and retrieval systems decide what to remember, what to hide, what to recall, what to archive, and what can be safely forgotten.
 
-中文：
+中文：  
 Möbius Phase Retrieval SDK 協助 AI 與檢索系統判斷什麼該記住、什麼可暫藏、什麼需要召回、什麼可歸檔、什麼可以安全遺忘。
 
 ## Standalone Build
@@ -17,12 +17,14 @@ cargo run --example json_retrieval_demo -- examples/json_retrieval_demo_input.js
 ```
 
 The private RetryIX runtime, MemoryKernel scheduling logic, hardware-routing logic, and PIM-related execution paths are not included.
+
 ## What This SDK Does
+
 - Provides application-layer phase-aware retrieval
 - Provides visibility + importance classification language
-- Provides hybrid retrieval (fast candidate recall + precision rerank)
+- Provides hybrid retrieval: fast candidate recall + precision rerank
 - Provides adaptive profile selection and retrieval metrics
-- Provides reproducible benchmark/demo commands
+- Provides reproducible build, test, and demo commands
 
 ## What This SDK Does Not Do
 
@@ -38,11 +40,13 @@ It does not expose:
 - physical transport, specialized hardware execution, or hardware PIM logic
 
 ## Main Use Cases
+
 1. AI long-context memory recall
 2. Data-center semantic retrieval classification
 3. Latent / archived / cold memory governance
 
 ## Core Concepts
+
 - Full-reptend phase coordinate
 - Möbius half-turn latent pairing
 - Visibility class
@@ -52,38 +56,39 @@ It does not expose:
 - Metrics
 
 ## Novelty Boundary
+
 This SDK does not claim to invent retrieval, reranking, semantic indexing, or memory tiering from scratch.
 
 Its contribution is the application of full-reptend prime phase coordinates and Möbius half-turn latent pairing as a practical indexing schema for memory governance, latent-state recovery, and phase-aware retrieval.
 
 ## Public Boundary Claim
+
 This SDK is an application-layer retrieval and memory-governance SDK.
+
 It does not implement physical transport, quantum transport, hardware PIM execution, or private RetryIX runtime internals.
 
 ## Minimal Reproducible Commands
-Run from repo root `E:\0421\retryix_rs`:
 
-```powershell
-cargo check -p retryix_memory
-cargo test -p retryix_memory mobius_phase_retrieval -- --nocapture
-cargo run -p retryix_memory --release --example mobius_phase_retrieval_compare -- 5000 40 40
+Run from this repository root:
+
+```bash
+cargo build
+cargo test
+cargo run --example basic_usage
+cargo run --example json_retrieval_demo -- examples/json_retrieval_demo_input.json
 ```
 
-Additional benchmark commands:
+Expected behavior:
 
-```powershell
-cargo run -p retryix_memory --release --example mobius_phase_retrieval_compare -- 20000 200
-cargo run -p retryix_memory --release --example mobius_phase_retrieval_compare -- 50000 500 150
-```
-
-SDK usage demos:
-
-```powershell
-cargo run -p retryix_memory --release --example mobius_phase_sdk_basic_usage
-cargo run -p retryix_memory --release --example mobius_phase_sdk_json_retrieval_demo -- sdk/mobius_phase_retrieval/examples/json_retrieval_demo_input.json
-```
+- `cargo build` compiles the standalone public crate.
+- `cargo test` runs the SDK unit tests.
+- `basic_usage` runs a deterministic retrieval demo.
+- `json_retrieval_demo` loads the sample JSON input and produces retrieval output.
 
 ## Files
+
+- `Cargo.toml`
+- `src/lib.rs`
 - `examples/basic_usage.rs`
 - `examples/json_retrieval_demo.rs`
 - `examples/json_retrieval_demo_input.json`
@@ -93,8 +98,10 @@ cargo run -p retryix_memory --release --example mobius_phase_sdk_json_retrieval_
 - `benchmarks/BENCHMARK_RESULTS.md`
 - `CHANGELOG.md`
 - `CONTRIBUTING.md`
+- `LICENSE`
 - `LICENSE_SUMMARY.md`
 
 ## Author
+
 - Ice Xu
 - Contact: `ice____@msn.com`
