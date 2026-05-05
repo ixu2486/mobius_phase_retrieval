@@ -5,6 +5,15 @@ Möbius Phase Retrieval SDK helps AI and retrieval systems decide what to rememb
 中文：
 Möbius Phase Retrieval SDK 協助 AI 與檢索系統判斷什麼該記住、什麼可暫藏、什麼需要召回、什麼可歸檔、什麼可以安全遺忘。
 
+## Standalone Build
+
+This public SDK is now a standalone Rust crate and does not depend on private RetryIX path crates.
+
+```bash
+cargo build
+cargo test
+cargo run --example basic_usage
+
 ## What This SDK Does
 - Provides application-layer phase-aware retrieval
 - Provides visibility + importance classification language
