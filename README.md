@@ -13,12 +13,17 @@ Möbius Phase Retrieval SDK 協助 AI 與檢索系統判斷什麼該記住、什
 - Provides reproducible benchmark/demo commands
 
 ## What This SDK Does Not Do
-- Does **not** expose RetryIX private runtime internals
-- Does **not** expose MemoryKernel internal scheduling details
-- Does **not** expose TurboQuant integration internals
-- Does **not** expose SPD/EEPROM physical contract logic
-- Does **not** expose hardware routing/private execution paths
-- Does **not** implement physical transport, quantum transport, or hardware PIM execution
+
+This public SDK is limited to the application-layer retrieval and semantic indexing interface.
+
+It does not expose:
+
+- RetryIX private runtime internals
+- MemoryKernel internal scheduling details
+- TurboQuant-compatible backend internals
+- private hardware-interface contracts
+- device-level routing or execution paths
+- physical transport, specialized hardware execution, or hardware PIM logic
 
 ## Main Use Cases
 1. AI long-context memory recall
