@@ -13,8 +13,10 @@ This public SDK is now a standalone Rust crate and does not depend on private Re
 cargo build
 cargo test
 cargo run --example basic_usage
+cargo run --example json_retrieval_demo -- examples/json_retrieval_demo_input.json
 ```
 
+The private RetryIX runtime, MemoryKernel scheduling logic, hardware-routing logic, and PIM-related execution paths are not included.
 ## What This SDK Does
 - Provides application-layer phase-aware retrieval
 - Provides visibility + importance classification language
