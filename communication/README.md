@@ -1,5 +1,3 @@
-下面是可直接存成 `communication/README.md` 的版本：
-
 # DS-MCTI v0 Communication Demo
 
 This folder contains a minimal two-device communication demo for **DS-MCTI v0**.
