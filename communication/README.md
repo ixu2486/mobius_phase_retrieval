@@ -15,10 +15,6 @@ The demo validates a seven-layer path-dependent closure route:
 A successful run prints:
 
 
-```
-
-```text
-File successfully created: README.md
 
 ```text
 CHAIN_CLOSURE_PASS
