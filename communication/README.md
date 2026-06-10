@@ -1,18 +1,19 @@
-```python
-import os
+# DS-MCTI v0 Communication Demo
 
-markdown_content = """# DS-MCTI v0 Communication Demo
+This folder contains a minimal two-device communication demo for DS-MCTI v0.
 
-This folder contains a minimal two-device communication demo for **DS-MCTI v0**.  
 The demo validates a seven-layer path-dependent closure route:
 
-$$\\frac{1}{7} \\rightarrow \\frac{1}{17} \\rightarrow \\frac{1}{19} \\rightarrow \\frac{1}{23} \\rightarrow \\frac{1}{29} \\rightarrow \\frac{1}{47} \\rightarrow \\frac{1}{58} \\Rightarrow \\frac{1}{7}$$
+`1/7 -> 1/17 -> 1/19 -> 1/23 -> 1/29 -> 1/47 -> 1/58 => 1/7`
 
-* **Device A** sends the ordered route.
-* **Device B** verifies the route and sends a normalized return after the $1/58$ return gate.
-* **Device A** accepts the result only when the returned $1/7$ closure is verified.
+- **Device A** sends the ordered route.  
+- **Device B** verifies the route and sends a normalized return after the 1/58 return gate.  
+- **Device A** accepts the result only when the returned 1/7 closure is verified.  
+
+```
 
 A successful run prints:
+
 
 ```
 
