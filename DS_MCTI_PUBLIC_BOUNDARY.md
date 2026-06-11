@@ -80,3 +80,7 @@ Commercial use, platform integration, productization, hosted services, enterpris
 This demo exposes the closure behavior and reproducible communication boundary of DS-MCTI v0.
 
 It does not disclose, license, or waive rights to the full closure-generation theory, private RetryIX runtime internals, patent-sensitive core technology, or future DS-MCTI-derived applications.
+
+For DS-MCTI public boundary and seven-layer closure-route reservation, see:
+
+`../DS_MCTI_PUBLIC_BOUNDARY.md`
