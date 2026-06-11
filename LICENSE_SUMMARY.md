@@ -38,3 +38,10 @@ Private RetryIX internals are not licensed through this SDK boundary.
 ## License Precedence
 This summary is not a substitute for the binding repository license or written commercial license agreement.
 If there is any conflict, the official repository license and separately executed RetryIX commercial license terms control.
+
+## DS-MCTI Seven-Layer Closure Boundary
+
+The public communication demo includes a limited reproducible demonstration of the seven-layer DS-MCTI closure route:
+
+```text
+1/7 -> 1/17 -> 1/19 -> 1/23 -> 1/29 -> 1/47 -> 1/58 => 1/7
