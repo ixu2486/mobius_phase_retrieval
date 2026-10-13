@@ -3,7 +3,7 @@ name = "mobius_phase_retrieval_sdk"
 version = "0.4.2"
 edition = "2021"
 description = "Standalone public application-layer SDK for Möbius Phase Retrieval"
-license = "license-file = "LICENSE"
+license-file = "LICENSE"
 repository = "https://github.com/ixu2486/mobius_phase_retrieval"
 readme = "README.md"
 
